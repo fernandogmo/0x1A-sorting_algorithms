@@ -11,9 +11,7 @@ void insertion_sort_list(listint_t **list)
 
 	for (i = (*list)->next; i != NULL; i = i->next)
 	{
-		int n = i->n;
-
-		for (j = i; j->prev != NULL && j->prev->n > n;)
+		for (j = i; j->prev != NULL && j->prev->n > i->n;)
 		{
 			if (j->next)
 				j->next->prev = j->prev;
