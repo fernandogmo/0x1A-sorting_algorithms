@@ -48,7 +48,7 @@ int partition(int *array, int lo, int hi)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (size > 2)
+	if (size > 1)
 	{
 		int pivot = partition(array, 0, size - 1);
 
