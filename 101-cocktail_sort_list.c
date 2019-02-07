@@ -1,14 +1,17 @@
 #include "sort.h"
 
 /**
+ * cocktail_sort_list - Sorts a linked list of integers
+ * using the cocktail sort algorithm
  *
+ * @list: The list to be sorted
  */
 
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *temp = *list;
-	int swapped = 0;
-	int phase = 0;
+	int swapped = 0; /* if 2 elements have been swapped, this is set to 1 */
+	int phase = 0; /* 0 for forward, 1 for backward */
 
 	while (temp)
 	{
