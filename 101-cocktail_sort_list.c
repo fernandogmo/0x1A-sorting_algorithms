@@ -28,8 +28,8 @@ void cocktail_sort_list(listint_t **list)
 			print_list(*list);
 		}
 		if (phase == 0 && temp->next)
-			temp = temp->next, printf("temp = %d\n", temp->n);
-		else if (phase == 1 && temp->prev)
+			temp = temp->next;
+		else if (phase == 1 && temp->prev && !(temp->prev->n > temp->n))
 			temp = temp->prev;
 		if (swapped == 0 && (temp->next == NULL || temp->prev == NULL))
 			return;
